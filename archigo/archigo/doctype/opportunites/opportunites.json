@@ -5,15 +5,19 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "d\u00e9tails_section",
   "date",
   "date_echeance",
   "client",
+  "column_break_qfid",
   "commune",
   "wilaya",
-  "column_break_qfid",
+  "workflow_state",
+  "sec_type_opport",
   "type_opport",
-  "cat_proj",
   "type_projet",
+  "cat_proj",
+  "column_break_lsml",
   "dossier_qualification",
   "offre_technique",
   "offre_financiere",
@@ -92,12 +96,32 @@
   },
   {
    "fieldname": "section_break_aryb",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "d\u00e9tails_section",
+   "fieldtype": "Section Break",
+   "label": "D\u00e9tails"
+  },
+  {
+   "fieldname": "sec_type_opport",
+   "fieldtype": "Section Break",
+   "label": "Type d\u2019opportunit\u00e9"
+  },
+  {
+   "fieldname": "column_break_lsml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "label": "Statut"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-13 11:29:24.916883",
+ "modified": "2024-03-13 11:36:45.125248",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites",
