@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-13 11:22:39.588223",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "date_echeance",
+  "client",
+  "commune",
+  "wilaya",
+  "column_break_qfid",
+  "type_opport",
+  "cat_proj",
+  "type_projet",
+  "dossier_qualification",
+  "offre_technique",
+  "offre_financiere",
+  "section_break_aryb",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_opport",
+   "fieldtype": "Data",
+   "label": "Type d\u2019opportunit\u00e9"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "cat_proj",
+   "fieldtype": "Data",
+   "label": "Categorie Projet"
+  },
+  {
+   "fieldname": "type_projet",
+   "fieldtype": "Data",
+   "label": "Type Projet"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "date_echeance",
+   "fieldtype": "Date",
+   "label": "Date d\u2019\u00e9ch\u00e9ance"
+  },
+  {
+   "default": "0",
+   "fieldname": "dossier_qualification",
+   "fieldtype": "Check",
+   "label": "Dossier Qualification"
+  },
+  {
+   "default": "0",
+   "fieldname": "offre_technique",
+   "fieldtype": "Check",
+   "label": "Offre Technique"
+  },
+  {
+   "default": "0",
+   "fieldname": "offre_financiere",
+   "fieldtype": "Check",
+   "label": "Offre Financi\u00e8re"
+  },
+  {
+   "fieldname": "commune",
+   "fieldtype": "Data",
+   "label": "Commune"
+  },
+  {
+   "fieldname": "wilaya",
+   "fieldtype": "Data",
+   "label": "Wilaya"
+  },
+  {
+   "fieldname": "column_break_qfid",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_aryb",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-13 11:29:24.916883",
+ "modified_by": "Administrator",
+ "module": "Archigo",
+ "name": "Opportunites",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
