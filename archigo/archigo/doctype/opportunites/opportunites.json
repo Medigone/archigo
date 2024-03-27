@@ -7,8 +7,8 @@
  "field_order": [
   "d\u00e9tails_section",
   "date",
-  "date_echeance",
   "client",
+  "date_echeance",
   "column_break_qfid",
   "commune",
   "wilaya",
@@ -27,8 +27,9 @@
  "fields": [
   {
    "fieldname": "type_opport",
-   "fieldtype": "Data",
-   "label": "Type d\u2019opportunit\u00e9"
+   "fieldtype": "Link",
+   "label": "Type d\u2019opportunit\u00e9",
+   "options": "Type Opportunite"
   },
   {
    "default": "Today",
@@ -44,13 +45,15 @@
   },
   {
    "fieldname": "cat_proj",
-   "fieldtype": "Data",
-   "label": "Categorie Projet"
+   "fieldtype": "Link",
+   "label": "Categorie Projet",
+   "options": "Categories Projets"
   },
   {
    "fieldname": "type_projet",
-   "fieldtype": "Data",
-   "label": "Type Projet"
+   "fieldtype": "Link",
+   "label": "Type Projet",
+   "options": "Project Type"
   },
   {
    "fieldname": "description",
@@ -82,13 +85,16 @@
   },
   {
    "fieldname": "commune",
-   "fieldtype": "Data",
-   "label": "Commune"
+   "fieldtype": "Link",
+   "label": "Commune",
+   "options": "Communes"
   },
   {
+   "fetch_from": "commune.wilaya",
    "fieldname": "wilaya",
-   "fieldtype": "Data",
-   "label": "Wilaya"
+   "fieldtype": "Link",
+   "label": "Wilaya",
+   "options": "Wilayas"
   },
   {
    "fieldname": "column_break_qfid",
@@ -122,7 +128,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-13 11:38:10.476066",
+ "modified": "2024-03-27 17:44:18.329609",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites",
@@ -141,7 +147,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "client"
 }
