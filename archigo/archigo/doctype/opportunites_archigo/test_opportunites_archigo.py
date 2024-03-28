@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestOpportunites(FrappeTestCase):
+class TestOpportunitesArchigo(FrappeTestCase):
 	pass
