@@ -24,14 +24,15 @@
   "surface",
   "column_break_riuy",
   "montant_projet_proj",
-  "section_break_aryb",
-  "description",
   "localisation_tab",
   "commune",
   "wilaya",
   "column_break_ljcj",
   "gps",
   "carte",
+  "description_tab",
+  "section_break_aryb",
+  "description",
   "projet_tab",
   "projet",
   "section_break_xxfd",
@@ -80,8 +81,8 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
+   "fieldtype": "Text Editor",
+   "label": "Description du projet"
   },
   {
    "fieldname": "date_echeance",
@@ -125,8 +126,7 @@
   },
   {
    "fieldname": "section_break_aryb",
-   "fieldtype": "Section Break",
-   "label": "Description"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "d\u00e9tails_section",
@@ -236,11 +236,16 @@
    "fieldtype": "Float",
    "label": "Surface (m\u00b2)",
    "precision": "2"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 12:55:37.133302",
+ "modified": "2024-03-28 12:58:44.834168",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
