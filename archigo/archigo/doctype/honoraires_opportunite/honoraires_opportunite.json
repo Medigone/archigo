@@ -21,7 +21,7 @@
    "fieldname": "pct",
    "fieldtype": "Percent",
    "in_list_view": 1,
-   "label": "PCT",
+   "label": "%",
    "precision": "2"
   },
   {
@@ -34,7 +34,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-28 12:23:13.094684",
+ "modified": "2024-03-28 12:41:51.531621",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Honoraires Opportunite",
