@@ -6,29 +6,43 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "status",
   "d\u00e9tails_section",
-  "date",
   "client",
-  "date_echeance",
+  "type_opport",
   "column_break_qfid",
+  "date",
+  "date_echeance",
+  "section_break_kpfs",
+  "montant_projet_proj",
+  "column_break_riuy",
+  "total_honoraires_proj",
+  "section_break_aryb",
+  "description",
+  "localisation_tab",
   "commune",
   "wilaya",
-  "workflow_state",
-  "sec_type_opport",
-  "type_opport",
+  "column_break_ljcj",
+  "gps",
+  "carte",
+  "projet_tab",
   "type_projet",
   "cat_proj",
+  "projet",
   "column_break_lsml",
   "dossier_qualification",
   "offre_technique",
   "offre_financiere",
-  "section_break_aryb",
-  "description"
+  "honoraires_tab",
+  "phases_section",
+  "table_honoraires"
  ],
  "fields": [
   {
    "fieldname": "type_opport",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type d\u2019opportunit\u00e9",
    "options": "Type Opportunite"
   },
@@ -36,11 +50,14 @@
    "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
+   "in_list_view": 1,
    "label": "Date"
   },
   {
    "fieldname": "client",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Client",
    "options": "Customer"
   },
@@ -112,24 +129,90 @@
    "label": "D\u00e9tails"
   },
   {
-   "fieldname": "sec_type_opport",
-   "fieldtype": "Section Break",
-   "label": "Type d\u2019opportunit\u00e9"
-  },
-  {
    "fieldname": "column_break_lsml",
    "fieldtype": "Column Break",
    "label": "V\u00e9rifications "
   },
   {
-   "fieldname": "workflow_state",
+   "fieldname": "projet_tab",
+   "fieldtype": "Tab Break",
+   "label": "Projet"
+  },
+  {
+   "default": "Nouveau",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Statut",
+   "options": "Nouveau\nEn Cours\nGagn\u00e9e\nPerdue"
+  },
+  {
+   "fieldname": "projet",
+   "fieldtype": "Link",
+   "label": "Projet",
+   "options": "Project"
+  },
+  {
+   "fieldname": "localisation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Localisation"
+  },
+  {
+   "fieldname": "honoraires_tab",
+   "fieldtype": "Tab Break",
+   "label": "Honoraires"
+  },
+  {
+   "fieldname": "phases_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_honoraires",
+   "fieldtype": "Table",
+   "label": "Table Honoraires - Phases",
+   "options": "Honoraires Opportunite"
+  },
+  {
+   "fieldname": "gps",
    "fieldtype": "Data",
-   "label": "Statut"
+   "label": "Localisation GPS"
+  },
+  {
+   "fieldname": "column_break_ljcj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "carte",
+   "fieldtype": "HTML",
+   "label": "Carte"
+  },
+  {
+   "fieldname": "section_break_kpfs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "montant_projet_proj",
+   "fieldtype": "Currency",
+   "label": "Montant Projet (Projet\u00e9)",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_riuy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_honoraires_proj",
+   "fieldtype": "Currency",
+   "label": "Total Honoraires (Projet\u00e9)",
+   "non_negative": 1,
+   "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 11:35:40.724787",
+ "modified": "2024-03-28 12:30:11.865701",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
