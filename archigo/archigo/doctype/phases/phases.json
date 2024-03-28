@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:PH-{phase}",
+ "creation": "2024-03-28 13:59:28.688561",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "phase",
+  "honoraires",
+  "ordre_phases"
+ ],
+ "fields": [
+  {
+   "fieldname": "phase",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phases",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "honoraires",
+   "fieldtype": "Percent",
+   "label": "% Honoraires par d\u00e9faut",
+   "precision": "2"
+  },
+  {
+   "fieldname": "ordre_phases",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Ordre",
+   "non_negative": 1,
+   "unique": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-28 14:20:51.044539",
+ "modified_by": "Administrator",
+ "module": "Archigo",
+ "name": "Phases",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "ordre_phases",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "phase"
+}

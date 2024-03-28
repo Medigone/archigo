@@ -22,6 +22,7 @@
   "offre_financiere",
   "section_break_kpfs",
   "surface",
+  "cout_m2",
   "column_break_riuy",
   "montant_projet_proj",
   "localisation_tab",
@@ -241,11 +242,18 @@
    "fieldname": "description_tab",
    "fieldtype": "Tab Break",
    "label": "Description"
+  },
+  {
+   "fieldname": "cout_m2",
+   "fieldtype": "Currency",
+   "label": "Co\u00fbt au m\u00b2",
+   "non_negative": 1,
+   "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 12:58:44.834168",
+ "modified": "2024-03-28 14:25:54.916254",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
