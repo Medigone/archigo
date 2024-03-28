@@ -13,6 +13,11 @@
   "column_break_qfid",
   "date_echeance",
   "type_opport",
+  "section_break_kpfs",
+  "surface",
+  "cout_m2",
+  "column_break_riuy",
+  "montant_projet_proj",
   "section_break_sylk",
   "column_break_lsml",
   "dossier_qualification",
@@ -20,11 +25,6 @@
   "offre_technique",
   "column_break_pwsl",
   "offre_financiere",
-  "section_break_kpfs",
-  "surface",
-  "cout_m2",
-  "column_break_riuy",
-  "montant_projet_proj",
   "localisation_tab",
   "commune",
   "wilaya",
@@ -201,8 +201,8 @@
    "fieldname": "montant_projet_proj",
    "fieldtype": "Currency",
    "label": "Montant Projet (Projet\u00e9)",
-   "non_negative": 1,
-   "precision": "2"
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_riuy",
@@ -246,14 +246,14 @@
   {
    "fieldname": "cout_m2",
    "fieldtype": "Currency",
-   "label": "Co\u00fbt au m\u00b2",
+   "label": "Co\u00fbt au m\u00b2 (Da)",
    "non_negative": 1,
    "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 14:25:54.916254",
+ "modified": "2024-03-28 15:01:44.652317",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
