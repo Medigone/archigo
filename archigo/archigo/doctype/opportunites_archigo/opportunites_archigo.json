@@ -8,11 +8,11 @@
  "field_order": [
   "status",
   "d\u00e9tails_section",
-  "client",
-  "type_opport",
-  "column_break_qfid",
   "date",
+  "client",
+  "column_break_qfid",
   "date_echeance",
+  "type_opport",
   "section_break_sylk",
   "column_break_lsml",
   "dossier_qualification",
@@ -35,8 +35,8 @@
   "projet_tab",
   "projet",
   "section_break_xxfd",
-  "type_projet",
   "cat_proj",
+  "type_projet",
   "honoraires_tab",
   "phases_section",
   "table_honoraires",
@@ -149,7 +149,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Statut",
-   "options": "Nouveau\nEn Cours\nGagn\u00e9e\nPerdue"
+   "options": "Nouveau\nEn Cours\nEn Pause\nGagn\u00e9e\nPerdue"
   },
   {
    "fieldname": "projet",
@@ -234,13 +234,13 @@
   {
    "fieldname": "surface",
    "fieldtype": "Float",
-   "label": "Surface",
+   "label": "Surface (m\u00b2)",
    "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 12:40:42.108547",
+ "modified": "2024-03-28 12:55:37.133302",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
@@ -263,5 +263,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "client"
+ "title_field": "client",
+ "track_changes": 1
 }

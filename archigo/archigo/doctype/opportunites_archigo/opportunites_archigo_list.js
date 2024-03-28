@@ -8,6 +8,8 @@ frappe.listview_settings['Opportunites Archigo'] = {
             return [__("Nouveau"), "blue", "status,=,Nouveau"];
         } else if (doc.status == "En Cours") {
             return [__("En Cours"), "orange", "status,=,En Cours"];
+        } else if (doc.status == "En Pause") {
+            return [__("En Pause"), "grey", "status,=,En Pause"];    
         } else if (doc.status == "Gagnée") {
             return [__("Gagnée"), "green", "status,=,Gagnée"];
         } else {
