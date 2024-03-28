@@ -19,9 +19,8 @@
    "options": "Phases"
   },
   {
-   "fetch_from": "phase.honoraires",
    "fieldname": "pct",
-   "fieldtype": "Percent",
+   "fieldtype": "Float",
    "in_list_view": 1,
    "label": "%",
    "precision": "2"
@@ -30,13 +29,14 @@
    "fieldname": "total",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Total"
+   "label": "Total",
+   "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-28 14:05:56.620082",
+ "modified": "2024-03-28 15:57:10.753183",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Honoraires Opportunite",

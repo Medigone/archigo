@@ -213,7 +213,8 @@
    "fieldtype": "Currency",
    "label": "Total Honoraires (Projet\u00e9)",
    "non_negative": 1,
-   "precision": "2"
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_xxfd",
@@ -253,7 +254,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 15:01:44.652317",
+ "modified": "2024-03-28 16:43:56.887830",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",

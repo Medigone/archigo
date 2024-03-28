@@ -4,8 +4,6 @@
 # import frappe
 from frappe.model.document import Document
 
-
 class OpportunitesArchigo(Document):
-	def validate(self):
-		montant_projet_proj = 0
-		self.montant_projet_proj = self.surface * self.cout_m2
+    def validate(self):
+        self.montant_projet_proj = self.surface * self.cout_m2
