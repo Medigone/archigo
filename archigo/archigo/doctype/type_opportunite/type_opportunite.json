@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2024-03-27 17:34:31.635469",
  "doctype": "DocType",
@@ -18,7 +19,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-27 17:35:12.853563",
+ "modified": "2024-03-28 11:35:51.734185",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Type Opportunite",
