@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2024-03-13 12:58:54.864379",
  "doctype": "DocType",
@@ -23,7 +24,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-13 13:00:46.075860",
+ "modified": "2024-03-28 11:34:27.535172",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Communes",
