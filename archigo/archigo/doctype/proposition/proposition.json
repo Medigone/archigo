@@ -48,7 +48,6 @@
    "fieldname": "opportunite",
    "fieldtype": "Link",
    "in_filter": 1,
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Opportunit\u00e9",
    "options": "Opportunites Archigo"
@@ -139,6 +138,7 @@
    "fetch_from": "opportunite.montant_projet_proj",
    "fieldname": "montant_projet_proj",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Montant Projet (Projet\u00e9)",
    "precision": "2"
   },
@@ -210,6 +210,7 @@
   {
    "fieldname": "total_honoraires_proj",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Total Honoraires (Projet\u00e9)",
    "precision": "2",
    "read_only": 1
@@ -217,7 +218,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-29 13:44:37.019512",
+ "modified": "2024-03-29 13:55:45.251937",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Proposition",
@@ -236,7 +237,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "client"
 }
