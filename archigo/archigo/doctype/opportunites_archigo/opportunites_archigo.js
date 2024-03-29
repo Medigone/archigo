@@ -19,3 +19,24 @@ function calculate_and_update(frm) {
         frm.set_value("montant_projet_proj", montant_projet_proj);
     }
 }
+
+frappe.ui.form.on('Opportunites Archigo', {
+    refresh(frm) {
+        // Ajoute le bouton au groupe "Créer"
+        frm.add_custom_button('Proposition', function() {
+            // Logique de création de la proposition
+            frappe.call({
+                method: 'archigo.archigo.doctype.opportunites_archigo.opportunites_archigo.creer_proposition',
+                args: {source_name: frm.doc.name},
+                callback: function(r) {
+                    if(r.message) {
+                        frappe.msgprint('Proposition créée avec succès: ' + r.message);
+                        // Optionnel : ouvrir le nouveau document
+                        frappe.set_route('Form', 'Proposition', r.message);
+                    }
+                }
+            });
+        }, 'Créer');
+    }
+});
+
