@@ -50,12 +50,50 @@ function updateParentTotal(frm) {
 }
 
 function recalculateChildTotals(frm) {
-    frm.doc.table_honoraires.forEach(d => {
-        // Calculez le total pour chaque ligne en utilisant la nouvelle valeur de montant_projet_proj
+    const promises = frm.doc.table_honoraires.map(d => {
         let total = d.pct * frm.doc.montant_projet_proj / 100;
-        frappe.model.set_value(d.doctype, d.name, 'total', total);
+        return frappe.model.set_value(d.doctype, d.name, 'total', total);
     });
-    
-    // Après la mise à jour de toutes les lignes, mettez à jour le total dans le document parent
-    updateParentTotal(frm);
+
+    Promise.all(promises).then(() => {
+        updateParentTotal(frm);
+    });
 }
+frappe.ui.form.on('Opportunites Archigo', {
+    montant_projet_proj(frm) {
+        // Ici, nous supposons que le nom du champ de table est 'table_honoraires'
+        // Remplacez 'table_honoraires' par le nom réel de votre champ de table
+        const lignes = frm.doc.table_honoraires || [];
+        
+        lignes.forEach(d => {
+            // Exemple de recalcul, remplacez 'pct' et 'total' par vos champs réels
+            const total = d.pct * frm.doc.montant_projet_proj / 100;
+            frappe.model.set_value(d.doctype, d.name, 'total', total);
+        });
+
+        // Après la mise à jour de toutes les lignes, rafraîchir la table pour refléter les changements
+        frm.refresh_field('table_honoraires');
+        
+        // Mettez à jour le total dans le document parent si nécessaire
+        updateParentTotal(frm);
+    }
+});
+
+function updateParentTotal(frm) {
+    let total_honoraires = 0;
+    frm.doc.table_honoraires.forEach(d => total_honoraires += d.total);
+    frm.set_value('total_honoraires_proj', total_honoraires);
+    frm.refresh_field('total_honoraires_proj');
+}
+
+frappe.ui.form.on('Honoraires Opportunite', {
+    table_honoraires_remove: function(frm, cdt, cdn) {
+        var total_honoraires = 0;
+        frm.doc.table_honoraires.forEach(function(d) {
+            total_honoraires += d.total || 0; // Assurez-vous que 'total' est le champ correct
+        });
+        frm.set_value("total_honoraires_proj", total_honoraires);
+        frm.refresh_field("total_honoraires_proj");
+    }
+});
+
