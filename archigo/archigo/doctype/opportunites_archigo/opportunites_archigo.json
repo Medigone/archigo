@@ -10,6 +10,7 @@
   "d\u00e9tails_section",
   "date",
   "client",
+  "source",
   "column_break_qfid",
   "date_echeance",
   "type_opport",
@@ -25,9 +26,7 @@
   "wilaya",
   "column_break_ljcj",
   "gps",
-  "carte",
-  "proposition_tab",
-  "proposition"
+  "carte"
  ],
  "fields": [
   {
@@ -149,19 +148,16 @@
    "label": "Description"
   },
   {
-   "fieldname": "proposition_tab",
-   "fieldtype": "Tab Break",
-   "label": "Proposition"
-  },
-  {
-   "fieldname": "proposition",
-   "fieldtype": "Data",
-   "label": "Proposition"
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "\nAgences Gouvernementales\nEntreprises de Construction\nR\u00e9f\u00e9rences Clients\nR\u00e9seaux Sociaux\nAssociations Professionnelles\nConcours\nCollaborateurs Externes\nCollaborateurs Internes",
+   "sort_options": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-29 13:14:12.305131",
+ "modified": "2024-03-29 13:27:41.638196",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
