@@ -23,8 +23,9 @@
   },
   {
    "fieldname": "honoraires",
-   "fieldtype": "Percent",
-   "label": "% Honoraires par d\u00e9faut",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "% Honoraires",
    "precision": "2"
   },
   {
@@ -36,10 +37,9 @@
    "unique": 1
   }
  ],
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 14:20:51.044539",
+ "modified": "2024-03-29 12:16:14.700875",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Phases",
@@ -59,6 +59,7 @@
    "write": 1
   }
  ],
+ "search_fields": "ordre_phases",
  "show_title_field_in_link": 1,
  "sort_field": "ordre_phases",
  "sort_order": "ASC",

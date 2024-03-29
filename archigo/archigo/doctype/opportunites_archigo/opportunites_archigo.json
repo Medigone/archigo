@@ -18,31 +18,16 @@
   "cout_m2",
   "column_break_riuy",
   "montant_projet_proj",
-  "section_break_sylk",
-  "column_break_lsml",
-  "dossier_qualification",
-  "column_break_yras",
-  "offre_technique",
-  "column_break_pwsl",
-  "offre_financiere",
+  "section_break_uzjj",
+  "description",
   "localisation_tab",
   "commune",
   "wilaya",
   "column_break_ljcj",
   "gps",
   "carte",
-  "description_tab",
-  "section_break_aryb",
-  "description",
-  "projet_tab",
-  "projet",
-  "section_break_xxfd",
-  "cat_proj",
-  "type_projet",
-  "honoraires_tab",
-  "phases_section",
-  "table_honoraires",
-  "total_honoraires_proj"
+  "proposition_tab",
+  "proposition"
  ],
  "fields": [
   {
@@ -69,44 +54,13 @@
    "options": "Customer"
   },
   {
-   "fieldname": "cat_proj",
-   "fieldtype": "Link",
-   "label": "Categorie Projet",
-   "options": "Categories Projets"
-  },
-  {
-   "fieldname": "type_projet",
-   "fieldtype": "Link",
-   "label": "Type Projet",
-   "options": "Project Type"
-  },
-  {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
-   "label": "Description du projet"
+   "fieldtype": "Text Editor"
   },
   {
    "fieldname": "date_echeance",
    "fieldtype": "Date",
    "label": "Date d\u2019\u00e9ch\u00e9ance"
-  },
-  {
-   "default": "0",
-   "fieldname": "dossier_qualification",
-   "fieldtype": "Check",
-   "label": "Dossier Qualification"
-  },
-  {
-   "default": "0",
-   "fieldname": "offre_technique",
-   "fieldtype": "Check",
-   "label": "Offre Technique"
-  },
-  {
-   "default": "0",
-   "fieldname": "offre_financiere",
-   "fieldtype": "Check",
-   "label": "Offre Financi\u00e8re"
   },
   {
    "fieldname": "commune",
@@ -119,29 +73,17 @@
    "fieldname": "wilaya",
    "fieldtype": "Link",
    "label": "Wilaya",
-   "options": "Wilayas"
+   "options": "Wilayas",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_qfid",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_aryb",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "d\u00e9tails_section",
    "fieldtype": "Section Break",
    "label": "D\u00e9tails"
-  },
-  {
-   "fieldname": "column_break_lsml",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "projet_tab",
-   "fieldtype": "Tab Break",
-   "label": "Projet"
   },
   {
    "default": "Nouveau",
@@ -153,30 +95,9 @@
    "options": "Nouveau\nEn Cours\nEn Pause\nGagn\u00e9e\nPerdue"
   },
   {
-   "fieldname": "projet",
-   "fieldtype": "Link",
-   "label": "Projet",
-   "options": "Project"
-  },
-  {
    "fieldname": "localisation_tab",
    "fieldtype": "Tab Break",
    "label": "Localisation"
-  },
-  {
-   "fieldname": "honoraires_tab",
-   "fieldtype": "Tab Break",
-   "label": "Honoraires"
-  },
-  {
-   "fieldname": "phases_section",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "table_honoraires",
-   "fieldtype": "Table",
-   "label": "Table Honoraires - Phases",
-   "options": "Honoraires Opportunite"
   },
   {
    "fieldname": "gps",
@@ -195,11 +116,12 @@
   {
    "fieldname": "section_break_kpfs",
    "fieldtype": "Section Break",
-   "label": "Donn\u00e9es Projet"
+   "label": "Donn\u00e9es Opportunit\u00e9"
   },
   {
    "fieldname": "montant_projet_proj",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Montant Projet (Projet\u00e9)",
    "precision": "2",
    "read_only": 1
@@ -209,40 +131,10 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "total_honoraires_proj",
-   "fieldtype": "Currency",
-   "label": "Total Honoraires (Projet\u00e9)",
-   "non_negative": 1,
-   "precision": "2",
-   "read_only": 1
-  },
-  {
-   "fieldname": "section_break_xxfd",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "section_break_sylk",
-   "fieldtype": "Section Break",
-   "label": "Dossiers \u00e0 pr\u00e9parer"
-  },
-  {
-   "fieldname": "column_break_yras",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_pwsl",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "surface",
    "fieldtype": "Float",
    "label": "Surface (m\u00b2)",
    "precision": "2"
-  },
-  {
-   "fieldname": "description_tab",
-   "fieldtype": "Tab Break",
-   "label": "Description"
   },
   {
    "fieldname": "cout_m2",
@@ -250,11 +142,26 @@
    "label": "Co\u00fbt au m\u00b2 (Da)",
    "non_negative": 1,
    "precision": "2"
+  },
+  {
+   "fieldname": "section_break_uzjj",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "proposition_tab",
+   "fieldtype": "Tab Break",
+   "label": "Proposition"
+  },
+  {
+   "fieldname": "proposition",
+   "fieldtype": "Data",
+   "label": "Proposition"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 16:43:56.887830",
+ "modified": "2024-03-29 13:14:12.305131",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
@@ -273,6 +180,7 @@
    "write": 1
   }
  ],
+ "search_fields": "client,type_opport",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

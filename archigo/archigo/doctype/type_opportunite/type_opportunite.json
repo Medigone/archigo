@@ -2,6 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "format:TYO-{type_opportunite}",
  "creation": "2024-03-27 17:34:31.635469",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -19,10 +20,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 11:35:51.734185",
+ "modified": "2024-03-29 12:23:10.159580",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Type Opportunite",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

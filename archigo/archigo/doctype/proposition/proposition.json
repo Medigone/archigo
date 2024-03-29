@@ -1,0 +1,242 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-29 12:31:48.862027",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "section_break_cmuq",
+  "date",
+  "opportunite",
+  "column_break_sqca",
+  "date_echeance",
+  "client",
+  "d\u00e9tails_opportunit\u00e9_tab",
+  "type_opport",
+  "surface",
+  "cout_m2",
+  "column_break_hnsk",
+  "montant_projet_proj",
+  "description_section",
+  "description",
+  "projet_tab",
+  "projet",
+  "cat_proj",
+  "type_projet",
+  "dossiers_\u00e0_pr\u00e9parer_tab",
+  "dossier_qualification",
+  "column_break_wheq",
+  "offre_technique",
+  "column_break_efvq",
+  "offre_financiere",
+  "honoraires_tab",
+  "table_honoraires",
+  "section_break_nbia",
+  "column_break_cayf",
+  "column_break_rwii",
+  "total_honoraires_proj"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "opportunite",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Opportunit\u00e9",
+   "options": "Opportunites Archigo"
+  },
+  {
+   "fetch_from": "opportunite.client",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "projet_tab",
+   "fieldtype": "Tab Break",
+   "label": "Projet"
+  },
+  {
+   "fieldname": "projet",
+   "fieldtype": "Link",
+   "label": "Projet",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cat_proj",
+   "fieldtype": "Link",
+   "label": "Cat\u00e9gorie Projet",
+   "options": "Categories Projets"
+  },
+  {
+   "fieldname": "type_projet",
+   "fieldtype": "Link",
+   "label": "Type Projet",
+   "options": "Project Type"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Statut",
+   "options": "Nouveau\nEn Cours\nEn Pause\nGagn\u00e9e\nPerdue"
+  },
+  {
+   "fieldname": "section_break_cmuq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sqca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "opportunite.date_echeance",
+   "fetch_if_empty": 1,
+   "fieldname": "date_echeance",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date d\u2019\u00e9ch\u00e9ance"
+  },
+  {
+   "fetch_from": "opportunite.type_opport",
+   "fieldname": "type_opport",
+   "fieldtype": "Link",
+   "label": "Type d\u2019opportunit\u00e9",
+   "options": "Type Opportunite"
+  },
+  {
+   "fieldname": "d\u00e9tails_opportunit\u00e9_tab",
+   "fieldtype": "Tab Break",
+   "label": "D\u00e9tails Opportunit\u00e9"
+  },
+  {
+   "fetch_from": "opportunite.surface",
+   "fieldname": "surface",
+   "fieldtype": "Float",
+   "label": "Surface (m\u00b2)",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "opportunite.cout_m2",
+   "fieldname": "cout_m2",
+   "fieldtype": "Currency",
+   "label": "Co\u00fbt au m\u00b2 (Da)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_hnsk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "opportunite.montant_projet_proj",
+   "fieldname": "montant_projet_proj",
+   "fieldtype": "Currency",
+   "label": "Montant Projet (Projet\u00e9)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "dossiers_\u00e0_pr\u00e9parer_tab",
+   "fieldtype": "Tab Break",
+   "label": "Dossiers \u00e0 pr\u00e9parer"
+  },
+  {
+   "default": "0",
+   "fieldname": "dossier_qualification",
+   "fieldtype": "Check",
+   "label": "Dossier Qualification"
+  },
+  {
+   "fieldname": "column_break_wheq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "offre_technique",
+   "fieldtype": "Check",
+   "label": "Offre Technique"
+  },
+  {
+   "fieldname": "column_break_efvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "offre_financiere",
+   "fieldtype": "Check",
+   "label": "Offre Financi\u00e8re"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fetch_from": "opportunite.description",
+   "fetch_if_empty": 1,
+   "fieldname": "description",
+   "fieldtype": "Text Editor"
+  },
+  {
+   "fieldname": "honoraires_tab",
+   "fieldtype": "Tab Break",
+   "label": "Honoraires"
+  },
+  {
+   "fieldname": "table_honoraires",
+   "fieldtype": "Table",
+   "label": "Table Honoraires - Phases",
+   "options": "Honoraires Opportunite"
+  },
+  {
+   "fieldname": "section_break_nbia",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cayf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rwii",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_honoraires_proj",
+   "fieldtype": "Currency",
+   "label": "Total Honoraires (Projet\u00e9)",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-29 13:10:37.951239",
+ "modified_by": "Administrator",
+ "module": "Archigo",
+ "name": "Proposition",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
