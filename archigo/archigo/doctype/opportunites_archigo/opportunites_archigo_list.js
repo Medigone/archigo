@@ -16,4 +16,5 @@ frappe.listview_settings['Opportunites Archigo'] = {
             return [__("Perdue"), "red", "status,=,Perdue"];
         }
     },
+    hide_name_column: true,
 }

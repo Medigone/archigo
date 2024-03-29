@@ -121,7 +121,7 @@
    "fieldname": "montant_projet_proj",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Montant Projet (Projet\u00e9)",
+   "label": "Montant Opportunit\u00e9",
    "precision": "2",
    "read_only": 1
   },
@@ -157,7 +157,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-29 13:27:41.638196",
+ "modified": "2024-03-29 14:02:01.514263",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
