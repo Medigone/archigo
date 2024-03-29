@@ -87,7 +87,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Statut",
-   "options": "Nouveau\nEn Cours\nEn Pause\nGagn\u00e9e\nPerdue"
+   "options": "Nouveau\nEn Cours\nEn Pause\nEnvoy\u00e9e\nGagn\u00e9e\nPerdue"
   },
   {
    "fieldname": "section_break_cmuq",
@@ -217,7 +217,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-29 13:10:37.951239",
+ "modified": "2024-03-29 13:44:37.019512",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Proposition",
