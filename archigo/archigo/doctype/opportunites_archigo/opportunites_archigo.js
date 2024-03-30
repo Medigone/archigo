@@ -22,23 +22,27 @@ function calculate_and_update(frm) {
 
 frappe.ui.form.on('Opportunites Archigo', {
     refresh(frm) {
-        // Ajoute le bouton au groupe "Créer"
-        frm.add_custom_button('Proposition', function() {
-            // Logique de création de la proposition
-            frappe.call({
-                method: 'archigo.archigo.doctype.opportunites_archigo.opportunites_archigo.creer_proposition',
-                args: {source_name: frm.doc.name},
-                callback: function(r) {
-                    if(r.message) {
-                        frappe.msgprint('Proposition créée avec succès: ' + r.message);
-                        // Optionnel : ouvrir le nouveau document
-                        frappe.set_route('Form', 'Proposition', r.message);
+        // Vérifie si le statut du document est 'Approuvé'
+        if (frm.doc.status === 'Approuvé') {
+            // Ajoute le bouton au groupe "Créer" seulement si le document est approuvé
+            frm.add_custom_button('Proposition', function() {
+                // Logique de création de la proposition
+                frappe.call({
+                    method: 'archigo.archigo.doctype.opportunites_archigo.opportunites_archigo.creer_proposition',
+                    args: {source_name: frm.doc.name},
+                    callback: function(r) {
+                        if(r.message) {
+                            frappe.msgprint('Proposition créée avec succès: ' + r.message);
+                            // Optionnel : ouvrir le nouveau document
+                            frappe.set_route('Form', 'Proposition', r.message);
+                        }
                     }
-                }
-            });
-        }, 'Créer');
+                });
+            }, 'Créer');
+        }
     }
 });
+
 frappe.ui.form.on('Honoraires Opportunite', {
     montant_projet_proj: function(frm) {
         recalculateChildTotals(frm);

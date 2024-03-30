@@ -21,6 +21,7 @@
   },
   {
    "fetch_from": "phase.honoraires",
+   "fetch_if_empty": 1,
    "fieldname": "pct",
    "fieldtype": "Float",
    "in_list_view": 1,
@@ -40,7 +41,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-29 12:09:19.867047",
+ "modified": "2024-03-30 16:00:55.711661",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Honoraires Opportunite",

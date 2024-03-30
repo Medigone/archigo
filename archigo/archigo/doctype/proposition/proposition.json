@@ -9,6 +9,7 @@
   "section_break_cmuq",
   "date",
   "opportunite",
+  "amended_from",
   "column_break_sqca",
   "date_echeance",
   "client",
@@ -24,18 +25,18 @@
   "projet",
   "cat_proj",
   "type_projet",
-  "dossiers_\u00e0_pr\u00e9parer_tab",
-  "dossier_qualification",
-  "column_break_wheq",
-  "offre_technique",
-  "column_break_efvq",
-  "offre_financiere",
   "honoraires_tab",
   "table_honoraires",
   "section_break_nbia",
   "column_break_cayf",
   "column_break_rwii",
-  "total_honoraires_proj"
+  "total_honoraires_proj",
+  "dossiers_\u00e0_pr\u00e9parer_tab",
+  "dossier_qualification",
+  "column_break_wheq",
+  "offre_technique",
+  "column_break_efvq",
+  "offre_financiere"
  ],
  "fields": [
   {
@@ -85,8 +86,10 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Statut",
-   "options": "Nouveau\nEn Cours\nEn Pause\nEnvoy\u00e9e\nGagn\u00e9e\nPerdue"
+   "options": "Nouveau\nEn Cours\nEn Pause\nEnvoy\u00e9e\nEn R\u00e9vision\nGagn\u00e9e\nPerdue",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_cmuq",
@@ -114,10 +117,11 @@
   {
    "fieldname": "d\u00e9tails_opportunit\u00e9_tab",
    "fieldtype": "Tab Break",
-   "label": "D\u00e9tails Opportunit\u00e9"
+   "label": "Opportunit\u00e9"
   },
   {
    "fetch_from": "opportunite.surface",
+   "fetch_if_empty": 1,
    "fieldname": "surface",
    "fieldtype": "Float",
    "label": "Surface (m\u00b2)",
@@ -125,6 +129,7 @@
   },
   {
    "fetch_from": "opportunite.cout_m2",
+   "fetch_if_empty": 1,
    "fieldname": "cout_m2",
    "fieldtype": "Currency",
    "label": "Co\u00fbt au m\u00b2 (Da)",
@@ -136,6 +141,7 @@
   },
   {
    "fetch_from": "opportunite.montant_projet_proj",
+   "fetch_if_empty": 1,
    "fieldname": "montant_projet_proj",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -214,11 +220,22 @@
    "label": "Total Honoraires (Projet\u00e9)",
    "precision": "2",
    "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Proposition",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-03-29 13:55:45.251937",
+ "modified": "2024-03-30 16:04:28.497729",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Proposition",
