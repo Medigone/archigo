@@ -15,6 +15,7 @@
   "date",
   "date_echeance",
   "source",
+  "amended_from",
   "section_break_kpfs",
   "surface",
   "cout_m2",
@@ -99,10 +100,12 @@
    "default": "Nouveau",
    "fieldname": "status",
    "fieldtype": "Select",
+   "hidden": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Statut",
-   "options": "Nouveau\nEn Cours\nEn Pause\nGagn\u00e9e\nPerdue"
+   "options": "Nouveau\nApprouv\u00e9\nRejet\u00e9\nAnnul\u00e9",
+   "read_only": 1
   },
   {
    "fieldname": "localisation_tab",
@@ -124,7 +127,6 @@
    "label": "Carte"
   },
   {
-   "collapsible": 1,
    "fieldname": "section_break_kpfs",
    "fieldtype": "Section Break",
    "label": "Donn\u00e9es Opportunit\u00e9"
@@ -134,8 +136,7 @@
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Montant Opportunit\u00e9",
-   "precision": "2",
-   "read_only": 1
+   "precision": "2"
   },
   {
    "fieldname": "column_break_riuy",
@@ -225,11 +226,22 @@
    "label": "Total Honoraires (Projet\u00e9)",
    "precision": "2",
    "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Opportunites Archigo",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-03-30 15:26:20.586447",
+ "modified": "2024-03-30 15:44:42.893230",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
