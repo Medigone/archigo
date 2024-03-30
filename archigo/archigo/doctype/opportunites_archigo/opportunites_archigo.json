@@ -248,7 +248,7 @@
    "search_index": 1
   },
   {
-   "depends_on": "eval:(doc.status == \"Approuv\u00e9\" || doc.status == \"Annul\u00e9\")",
+   "depends_on": "eval:(doc.status == 'Approuv\u00e9' || doc.status == 'Annul\u00e9')",
    "fieldname": "proposition_tab",
    "fieldtype": "Tab Break",
    "label": "Proposition",
@@ -263,7 +263,7 @@
    "link_fieldname": "opportunite"
   }
  ],
- "modified": "2024-03-30 23:10:37.074374",
+ "modified": "2024-03-30 23:38:06.224628",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
