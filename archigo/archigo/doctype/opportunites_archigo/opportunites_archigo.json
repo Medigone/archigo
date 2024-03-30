@@ -10,10 +10,11 @@
   "d\u00e9tails_section",
   "type_opport",
   "client",
-  "source",
+  "reference",
   "column_break_qfid",
   "date",
   "date_echeance",
+  "source",
   "section_break_kpfs",
   "surface",
   "cout_m2",
@@ -30,7 +31,13 @@
   "projet_tab",
   "projet",
   "cat_proj",
-  "type_projet"
+  "type_projet",
+  "honoraries_tab",
+  "table_honoraires",
+  "section_break_apuz",
+  "column_break_zznd",
+  "column_break_tbve",
+  "total_honoraires_proj"
  ],
  "fields": [
   {
@@ -117,6 +124,7 @@
    "label": "Carte"
   },
   {
+   "collapsible": 1,
    "fieldname": "section_break_kpfs",
    "fieldtype": "Section Break",
    "label": "Donn\u00e9es Opportunit\u00e9"
@@ -147,6 +155,7 @@
    "precision": "2"
   },
   {
+   "collapsible": 1,
    "fieldname": "section_break_uzjj",
    "fieldtype": "Section Break",
    "label": "Description"
@@ -180,11 +189,47 @@
    "fieldtype": "Link",
    "label": "Type Projet",
    "options": "Project Type"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "R\u00e9f\u00e9rence"
+  },
+  {
+   "fieldname": "honoraries_tab",
+   "fieldtype": "Tab Break",
+   "label": "Honoraries"
+  },
+  {
+   "fieldname": "table_honoraires",
+   "fieldtype": "Table",
+   "label": "Table Honoraires - Phases",
+   "options": "Honoraires Opportunite"
+  },
+  {
+   "fieldname": "section_break_apuz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zznd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tbve",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_honoraires_proj",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Honoraires (Projet\u00e9)",
+   "precision": "2",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-30 15:15:47.004650",
+ "modified": "2024-03-30 15:26:20.586447",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
