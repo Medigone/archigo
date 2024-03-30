@@ -69,6 +69,7 @@
    "fieldtype": "Text Editor"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "date_echeance",
    "fieldtype": "Date",
    "label": "Date d\u2019\u00e9ch\u00e9ance"
@@ -241,7 +242,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-30 15:44:42.893230",
+ "modified": "2024-03-30 16:38:37.637070",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
