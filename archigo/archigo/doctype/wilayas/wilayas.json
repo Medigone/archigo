@@ -2,25 +2,36 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "field:wilaya",
  "creation": "2024-03-13 13:00:10.172415",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "nom"
+  "wilaya",
+  "code"
  ],
  "fields": [
   {
-   "fieldname": "nom",
+   "fieldname": "wilaya",
    "fieldtype": "Data",
-   "label": "Nom"
+   "in_list_view": 1,
+   "label": "Nom",
+   "unique": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Code"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 11:34:02.898780",
+ "modified": "2024-03-30 13:21:58.188478",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Wilayas",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

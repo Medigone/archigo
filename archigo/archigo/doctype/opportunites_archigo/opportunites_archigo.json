@@ -26,7 +26,11 @@
   "wilaya",
   "column_break_ljcj",
   "gps",
-  "carte"
+  "carte",
+  "projet_tab",
+  "projet",
+  "cat_proj",
+  "type_projet"
  ],
  "fields": [
   {
@@ -153,11 +157,34 @@
    "label": "Source",
    "options": "\nAgences Gouvernementales\nEntreprises de Construction\nR\u00e9f\u00e9rences Clients\nR\u00e9seaux Sociaux\nAssociations Professionnelles\nConcours\nCollaborateurs Externes\nCollaborateurs Internes",
    "sort_options": 1
+  },
+  {
+   "fieldname": "projet_tab",
+   "fieldtype": "Tab Break",
+   "label": "Projet"
+  },
+  {
+   "fieldname": "projet",
+   "fieldtype": "Link",
+   "label": "Projet",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cat_proj",
+   "fieldtype": "Link",
+   "label": "Cat\u00e9gorie Projet",
+   "options": "Categories Projets"
+  },
+  {
+   "fieldname": "type_projet",
+   "fieldtype": "Link",
+   "label": "Type Projet",
+   "options": "Project Type"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-29 14:02:01.514263",
+ "modified": "2024-03-30 13:43:51.572030",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",

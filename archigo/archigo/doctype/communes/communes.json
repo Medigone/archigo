@@ -1,30 +1,30 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
  "creation": "2024-03-13 12:58:54.864379",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "nom",
+  "commune",
   "wilaya"
  ],
  "fields": [
   {
-   "fieldname": "nom",
-   "fieldtype": "Data",
-   "label": "Nom"
-  },
-  {
    "fieldname": "wilaya",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Wilaya",
    "options": "Wilayas"
+  },
+  {
+   "fieldname": "commune",
+   "fieldtype": "Data",
+   "label": "Nom"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-28 11:34:27.535172",
+ "modified": "2024-03-30 13:28:55.710704",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Communes",
@@ -43,7 +43,10 @@
    "write": 1
   }
  ],
+ "search_fields": "wilaya,commune",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "commune"
 }

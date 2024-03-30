@@ -1,8 +1,13 @@
 {
  "charts": [],
- "content": "[{\"id\":\"wnn51Y0ZJP\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Archigo</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"ATU8Qhd4P1\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Accueil\",\"col\":12}},{\"id\":\"j6q1dV8KCB\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Opportunit\u00e9s\",\"col\":4}},{\"id\":\"0kKZP0W5DJ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Propositions\",\"col\":4}},{\"id\":\"uK_1dIZK3x\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Projets\",\"col\":4}},{\"id\":\"h0KcKeEeC1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"LMB0R8OAlo\",\"type\":\"card\",\"data\":{\"card_name\":\"Opportunit\u00e9s\",\"col\":4}},{\"id\":\"sPCa-9BBPx\",\"type\":\"card\",\"data\":{\"card_name\":\"Clients & Fournisseurs\",\"col\":4}},{\"id\":\"qccUsX9g4D\",\"type\":\"card\",\"data\":{\"card_name\":\"Projets\",\"col\":4}}]",
  "creation": "2024-03-29 16:17:41.606274",
- "custom_blocks": [],
+ "custom_blocks": [
+  {
+   "custom_block_name": "Accueil",
+   "label": "Accueil"
+  }
+ ],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -12,12 +17,123 @@
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "Archigo",
- "links": [],
- "modified": "2024-03-29 16:18:29.155209",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Clients & Fournisseurs",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Client",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Factures Clients",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Factures Fournisseurs",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Opportunit\u00e9s",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Opportunit\u00e9s",
+   "link_count": 0,
+   "link_to": "Opportunites Archigo",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Propositions",
+   "link_count": 0,
+   "link_to": "Proposition",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Projets",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Projets",
+   "link_count": 0,
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "T\u00e2ches",
+   "link_count": 0,
+   "link_to": "Task",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-03-29 16:34:37.529049",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Archigo",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Projets",
+   "number_card_name": "Projets"
+  },
+  {
+   "label": "Opportunit\u00e9s",
+   "number_card_name": "Opportunit\u00e9s"
+  },
+  {
+   "label": "Propositions",
+   "number_card_name": "Propositions"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
