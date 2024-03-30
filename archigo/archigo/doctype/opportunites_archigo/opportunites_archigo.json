@@ -38,7 +38,8 @@
   "section_break_apuz",
   "column_break_zznd",
   "column_break_tbve",
-  "total_honoraires_proj"
+  "total_honoraires_proj",
+  "proposition_tab"
  ],
  "fields": [
   {
@@ -47,14 +48,16 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Type d\u2019opportunit\u00e9",
-   "options": "Type Opportunite"
+   "options": "Type Opportunite",
+   "reqd": 1
   },
   {
    "default": "Today",
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Date"
+   "label": "Date",
+   "reqd": 1
   },
   {
    "fieldname": "client",
@@ -62,7 +65,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Client",
-   "options": "Customer"
+   "options": "Customer",
+   "reqd": 1
   },
   {
    "fieldname": "description",
@@ -72,13 +76,16 @@
    "allow_on_submit": 1,
    "fieldname": "date_echeance",
    "fieldtype": "Date",
-   "label": "Date d\u2019\u00e9ch\u00e9ance"
+   "in_list_view": 1,
+   "label": "Date d\u2019\u00e9ch\u00e9ance",
+   "reqd": 1
   },
   {
    "fieldname": "commune",
    "fieldtype": "Link",
    "label": "Commune",
-   "options": "Communes"
+   "options": "Communes",
+   "reqd": 1
   },
   {
    "fetch_from": "commune.wilaya",
@@ -133,6 +140,7 @@
    "label": "Donn\u00e9es Opportunit\u00e9"
   },
   {
+   "default": "0",
    "fieldname": "montant_projet_proj",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -144,12 +152,14 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "0",
    "fieldname": "surface",
    "fieldtype": "Float",
    "label": "Surface (m\u00b2)",
    "precision": "2"
   },
   {
+   "default": "0",
    "fieldname": "cout_m2",
    "fieldtype": "Currency",
    "label": "Co\u00fbt au m\u00b2 (Da)",
@@ -164,9 +174,9 @@
   },
   {
    "fieldname": "source",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Source",
-   "options": "\nAgences Gouvernementales\nEntreprises de Construction\nR\u00e9f\u00e9rences Clients\nR\u00e9seaux Sociaux\nAssociations Professionnelles\nConcours\nCollaborateurs Externes\nCollaborateurs Internes",
+   "options": "Sources Opportunites",
    "sort_options": 1
   },
   {
@@ -223,7 +233,6 @@
   {
    "fieldname": "total_honoraires_proj",
    "fieldtype": "Currency",
-   "in_list_view": 1,
    "label": "Total Honoraires (Projet\u00e9)",
    "precision": "2",
    "read_only": 1
@@ -237,12 +246,24 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "depends_on": "eval:(doc.status == \"Approuv\u00e9\" || doc.status == \"Annul\u00e9\")",
+   "fieldname": "proposition_tab",
+   "fieldtype": "Tab Break",
+   "label": "Proposition",
+   "show_dashboard": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-03-30 16:38:37.637070",
+ "links": [
+  {
+   "link_doctype": "Proposition",
+   "link_fieldname": "opportunite"
+  }
+ ],
+ "modified": "2024-03-30 23:10:37.074374",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
@@ -262,10 +283,8 @@
   }
  ],
  "search_fields": "client,type_opport",
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "client",
  "track_changes": 1
 }
