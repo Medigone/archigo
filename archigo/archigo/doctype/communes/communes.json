@@ -2,6 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "creation": "2024-03-13 12:58:54.864379",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -24,7 +25,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-30 13:28:55.710704",
+ "modified": "2024-03-30 15:14:27.203921",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Communes",
@@ -45,8 +46,8 @@
  ],
  "search_fields": "wilaya,commune",
  "show_title_field_in_link": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "commune",
+ "sort_order": "ASC",
  "states": [],
  "title_field": "commune"
 }
