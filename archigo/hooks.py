@@ -129,6 +129,11 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+    "Opportunites Archigo": {
+        "on_cancel": "archigo.archigo.doctype.opportunites_archigo.opportunites_archigo.sur_annulation_opportunite"
+    },
+}
 
 # Scheduled Tasks
 # ---------------

@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe import _
 
 class OpportunitesArchigo(Document):
     def validate(self):
@@ -34,3 +35,10 @@ def creer_proposition(source_name):
     'message': 'Proposition créée avec succès.',  # ou 'Une proposition pour cette opportunité existe déjà.'
     'name': new_doc.name  # Nom du document créé ou existant
 }
+
+@frappe.whitelist()
+def sur_annulation_opportunite(doc, method):
+    # Affiche un message lorsque l'opportunité est annulée
+    message = _("L'opportunité {0} a été annulée. Veuillez vérifier la proposition liée.").format(doc.name)
+    frappe.msgprint(message)
+
