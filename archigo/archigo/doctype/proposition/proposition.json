@@ -87,8 +87,10 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Statut",
-   "options": "Nouveau\nEn Cours\nEn Pause\nEnvoy\u00e9e\nEn R\u00e9vision\nConvertie\nPerdue\nAnnul\u00e9",
+   "options": "Nouveau\nEn Cours\nEnvoy\u00e9e\nEn R\u00e9vision\nConvertie\nPerdue\nAnnul\u00e9",
    "read_only": 1
   },
   {
@@ -235,7 +237,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-30 16:27:38.767422",
+ "modified": "2024-03-30 16:51:53.384681",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Proposition",

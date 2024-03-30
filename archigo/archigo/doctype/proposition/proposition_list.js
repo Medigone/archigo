@@ -1,20 +1,18 @@
 frappe.listview_settings['Proposition'] = {
     get_indicator(doc) {
         // customize indicator color
-        if (doc.status == "Nouveau") {
-            return [__("Nouveau"), "blue", "status,=,Nouveau"];
-        } else if (doc.status == "En Cours") {
-            return [__("En Cours"), "orange", "status,=,En Cours"];
-        } else if (doc.status == "En Pause") {
-            return [__("En Pause"), "purple", "status,=,En Pause"]; 
-        } else if (doc.status == "Envoyée") {
-            return [__("Envoyée"), "yellow", "status,=,Envoyée"];   
-        } else if (doc.status == "Gagnée") {
-            return [__("Gagnée"), "green", "status,=,Gagnée"];
+        if (doc.workflow_state == "Nouveau") {
+            return [__("Nouveau"), "blue", "workflow_state,=,Nouveau"];
+        } else if (doc.workflow_state == "En Cours") {
+            return [__("En Cours"), "orange", "workflow_state,=,En Cours"];
+        } else if (doc.workflow_state == "Envoyée") {
+            return [__("Envoyée"), "yellow", "workflow_state,=,Envoyée"];   
+        } else if (doc.workflow_state == "Gagnée") {
+            return [__("Gagnée"), "green", "workflow_state,=,Gagnée"];
         } else {
-            return [__("Perdue"), "red", "status,=,Perdue"];
+            return [__("Perdue"), "red", "workflow_state,=,Perdue"];
         }
     },
 
-    hide_name_column: true,
+    
 }
