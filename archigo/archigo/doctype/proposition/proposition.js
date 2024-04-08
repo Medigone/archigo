@@ -103,42 +103,42 @@ frappe.ui.form.on('Honoraires Opportunite', {
     }
 });
 
-frappe.ui.form.on('Honoraires Opportunite', {
-    validate: function(frm) {
-        // Vérifie l'unicité lors de la sauvegarde et empêche la sauvegarde si nécessaire
-        const isUnique = validate_unique_phase(frm, true);
-        if (!isUnique) {
-            frappe.validated = false;
-            frappe.msgprint(__('Les valeurs du champ "phase" doivent être uniques. Veuillez corriger les doublons avant de sauvegarder.'));
-        }
-    },
-    table_honoraires_add: function(frm, cdt, cdn) {
-        validate_unique_phase(frm);
-    },
-    table_honoraires_remove: function(frm, cdt, cdn) {
-        validate_unique_phase(frm);
-    },
-    phase: function(frm, cdt, cdn) {
-        validate_unique_phase(frm);
-    }
-});
+// frappe.ui.form.on('Honoraires Opportunite', {
+//     validate: function(frm) {
+//         // Vérifie l'unicité lors de la sauvegarde et empêche la sauvegarde si nécessaire
+//         const isUnique = validate_unique_phase(frm, true);
+//         if (!isUnique) {
+//             frappe.validated = false;
+//             frappe.msgprint(__('Les valeurs du champ "phase" doivent être uniques. Veuillez corriger les doublons avant de sauvegarder.'));
+//         }
+//     },
+//     table_honoraires_add: function(frm, cdt, cdn) {
+//         validate_unique_phase(frm);
+//     },
+//     table_honoraires_remove: function(frm, cdt, cdn) {
+//         validate_unique_phase(frm);
+//     },
+//     phase: function(frm, cdt, cdn) {
+//         validate_unique_phase(frm);
+//     }
+// });
 
-function validate_unique_phase(frm, preventSave = false) {
-    let phases = frm.doc.table_honoraires.map(row => row.phase);
-    let uniquePhases = [...new Set(phases)];
+// function validate_unique_phase(frm, preventSave = false) {
+//     let phases = frm.doc.table_honoraires.map(row => row.phase);
+//     let uniquePhases = [...new Set(phases)];
 
-    if (phases.length !== uniquePhases.length) {
-        // S'il y a des doublons et que preventSave est false, effacez la dernière entrée ajoutée/modifiée
-        if (!preventSave) {
-            let lastIdx = phases.lastIndexOf(phases.find((item, idx) => phases.indexOf(item) !== idx));
-            let row = frm.doc.table_honoraires[lastIdx];
-            frappe.model.set_value(row.doctype, row.name, 'phase', null);
-            frappe.msgprint(__('La valeur du champ "phase" doit être unique. Le doublon a été supprimé.'));
-        }
-        return false;
-    }
-    return true;
-}
+//     if (phases.length !== uniquePhases.length) {
+//         // S'il y a des doublons et que preventSave est false, effacez la dernière entrée ajoutée/modifiée
+//         if (!preventSave) {
+//             let lastIdx = phases.lastIndexOf(phases.find((item, idx) => phases.indexOf(item) !== idx));
+//             let row = frm.doc.table_honoraires[lastIdx];
+//             frappe.model.set_value(row.doctype, row.name, 'phase', null);
+//             frappe.msgprint(__('La valeur du champ "phase" doit être unique. Le doublon a été supprimé.'));
+//         }
+//         return false;
+//     }
+//     return true;
+// }
 
 
 
