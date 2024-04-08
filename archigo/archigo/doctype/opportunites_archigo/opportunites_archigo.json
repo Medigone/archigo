@@ -263,13 +263,15 @@
    "link_fieldname": "opportunite"
   }
  ],
- "modified": "2024-03-31 00:12:34.128628",
+ "modified": "2024-04-02 18:53:41.989947",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Opportunites Archigo",
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -278,7 +280,9 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

@@ -6,6 +6,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "titre",
   "phase",
   "pct",
   "total"
@@ -16,18 +17,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Phase",
-   "options": "Phases",
-   "reqd": 1
+   "options": "Phases"
   },
   {
-   "fetch_from": "phase.honoraires",
-   "fetch_if_empty": 1,
    "fieldname": "pct",
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "%",
-   "precision": "2",
-   "reqd": 1
+   "precision": "2"
   },
   {
    "fieldname": "total",
@@ -36,12 +33,18 @@
    "label": "Total",
    "precision": "2",
    "read_only": 1
+  },
+  {
+   "fieldname": "titre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Titre"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-30 16:00:55.711661",
+ "modified": "2024-04-08 16:33:13.481015",
  "modified_by": "Administrator",
  "module": "Archigo",
  "name": "Honoraires Opportunite",

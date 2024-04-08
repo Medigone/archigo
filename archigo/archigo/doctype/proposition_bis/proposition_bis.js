@@ -1,13 +1,13 @@
 // Copyright (c) 2024, MEDIGO ONE and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Proposition", {
+// frappe.ui.form.on("Proposition Bis", {
 // 	refresh(frm) {
 
 // 	},
 // });
 
-frappe.ui.form.on("Proposition", {
+frappe.ui.form.on("Proposition Bis", {
     refresh(frm) {
         // Ceci est correct pour un calcul initial, mais considérez d'autres événements pour les mises à jour dynamiques.
     },
@@ -65,7 +65,7 @@ function recalculateChildTotals(frm) {
         updateParentTotal(frm);
     });
 }
-frappe.ui.form.on('Proposition', {
+frappe.ui.form.on('Proposition Bis', {
     montant_projet_proj(frm) {
         // Ici, nous supposons que le nom du champ de table est 'table_honoraires'
         // Remplacez 'table_honoraires' par le nom réel de votre champ de table
@@ -139,7 +139,4 @@ function validate_unique_phase(frm, preventSave = false) {
     }
     return true;
 }
-
-
-
 
